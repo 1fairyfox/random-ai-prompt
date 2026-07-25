@@ -33,7 +33,7 @@ the prompt text with no key at all. It runs entirely on your device and stores n
 
 📖 **Documentation** — [fairyfox.io/random-ai-prompt](https://fairyfox.io/random-ai-prompt/)
 
-### Get it
+## Get it
 
 | | |
 |---|---|

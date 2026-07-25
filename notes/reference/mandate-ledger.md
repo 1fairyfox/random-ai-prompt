@@ -23,8 +23,8 @@ The rule: a multi-part owner directive is transcribed **verbatim** into
 - **Status** is `done` · `blocked-with-evidence` · `awaiting-owner`. A completion claim **cites the
   rows**, not a paraphrase; the phase-end check diffs the delivered work against **the owner's
   original words**, not against the plan file.
-- **Deferral requires falsification** — `blocked` demands a recorded attempt (command, error,
-  version) **and** a retest trigger.
+- **Deferral requires falsification** — a `blocked-with-evidence` row demands a recorded attempt
+  (command, error, version) **and** a retest trigger, never a plausible reason alone.
 - **Disclosure is stateful.** An `awaiting-owner` row survives into the next session; the **first
   action** under the same owner next session is to re-present the open rows for a keep/descope
   decision. A repeated mandate escalates every `awaiting-owner` row to do-now, and a second

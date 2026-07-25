@@ -61,7 +61,7 @@ standard's `## Verify` section where it has one; a few standards are enforced by
 | mandate-ledger | [`mandate-ledger.md` → Verify](mandate-ledger.md#verify) — a multi-part owner directive gets a verbatim one-row-per-clause `notes/plans/<date>-mandate.md`; completion claims cite rows; no milestone-anchoring under an open mandate |
 | readme | [`readme.md` → Verify](readme.md#verify) — worded docs link near top, organized "Get it" section, mesh footer at bottom; missing links for existing destinations carry a recorded exception |
 | docker | [`docker.md` → Verify](docker.md#verify) — Linux-only build/test runs locally in a committed Docker path first, CI as backstop (tracked `gap` until the Dockerfile ships — see [adoption-manifest](adoption-manifest.md)) |
-| adoption-manifest | [`adoption-manifest.md`](adoption-manifest.md) — one row per standard; `copied-only ≠ adopted`; no summary claim without a backing row |
+| adoption-manifest | [`adoption-manifest.md` → Verify](adoption-manifest.md#verify-is-it-being-followed) — one row per standard; `copied-only ≠ adopted`; no `implemented` without a recorded per-row pass; no summary claim without a backing row |
 
 > **The [adoption manifest](adoption-manifest.md) is the record this audit reconciles against.** A
 > row here flips to `implemented` in the manifest only on a recorded per-row `## Verify` pass; this

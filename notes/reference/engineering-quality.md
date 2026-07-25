@@ -48,6 +48,11 @@ The per-standard slice the [compliance audit](compliance.md) aggregates — `don
 - Code is clean/modern/modular/focused; public surfaces carry doc-comments; docs are current.
 - Refactors came **with test updates**, not test rot.
 - Source-of-truth fidelity respected: no incidental rewrites of user data / settings / images.
+- **Ship contract (hub 0.21.0):** OpenSSF **Scorecard ≥ 7.0** holds (evidence: `scorecard.yml` +
+  the security badge / [`working-agreements.md`](working-agreements.md) §B5); **tech debt removed, not
+  deferred** (evidence: SonarCloud tech-debt gate + the maintenance sweep); **open PRs/issues triaged**
+  as part of shipping (evidence: the pre-release `gh pr list`/`gh issue list` check per
+  `CLAUDE.md` "GitHub Is Part of Default Management").
 
 ## The ship contract (hub 0.21.0)
 

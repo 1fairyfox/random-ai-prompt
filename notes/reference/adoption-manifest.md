@@ -9,7 +9,8 @@ release gate in [`git-workflow.md`](git-workflow.md). The canonical, project-agn
 lives in the read-only hub clone at
 `assets/references/fairyfox.io/hub/templates/notes-skeleton/reference/adoption-manifest.md`.
 
-**Seeded 2026-07-25** against hub `1.6.1` / `2d614f0` (adopting the 0.21.0 → 1.6.0 span). This is
+**Seeded 2026-07-25** against hub `1.6.1` / `2d614f0` (adopting the **0.20.2 → 1.6.1** version span —
+the standards-changelog entries across it are 0.21.0 → 1.6.0). This is
 the node's **first** manifest: the 0.21.0 release made it mandatory. Seeding it is itself the
 `checklists-are-contracts` adoption. Rows that RAP demonstrably lives and CI/notes enforce, but
 whose per-row `## Verify` table has **not been formally walked and recorded in this pass**, are
@@ -95,3 +96,17 @@ result (or `—`). `Evidence` = a link/path to the proof.
 
 _None._ No badge, README link, or other default-required item has been dropped on a user-granted
 exception; every canonical badge and required README cross-link is present.
+
+## Verify (is it being followed?)
+
+The per-manifest slice the [compliance audit](compliance.md) aggregates — report
+`done`/`partial`/`missing`:
+
+| Passes only when… | How to check |
+|-------------------|--------------|
+| **Every adopted hub standard has exactly one row**, with a state from the vocabulary | diff the row list against `hub/standards/` in the read-only clone; no standard missing, no duplicate |
+| **No row reads `implemented` without a recorded per-row `## Verify` pass** (date + result in `Last Verify`) | scan `implemented` rows for a dated Verify result; a blank `Last Verify` on an `implemented` row is a fail |
+| **Every `gap` names a due marker**; every `N-A` names a reason | read the state column — no bare `gap`/`N-A` |
+| **No summary claim elsewhere lacks a backing row** (no bare `Standards adopted ✅` in `status.md`/reports) | grep `status.md`, `notes/fairyfox-reports/`, changelog for unbacked ✅/"adopted" over a set |
+| **Any dropped default-required item** (badge, README link) has a dated **User exceptions** row | cross-check the badges/readme Verify against the User-exceptions section |
+| **`Adopted @` matches the hub `VERSION`/commit** the row was last reconciled against | compare against `assets/references/fairyfox.io/VERSION` at reconciliation time |
