@@ -10,6 +10,13 @@ Canonical, project-agnostic source: `assets/references/fairyfox.io/hub/standards
 part of the shared docs-site **chrome** ([`documentation.md`](documentation.md)) and its earning engine
 is the master `coins.js`, loaded after `reader.js`.
 
+**Base coin counter/button is MANDATORY (hub 1.4.0).** It ships with the chrome bundle; a project does
+**not** get to decide it's "not needed" and drop it — only project-*added* coin moments are optional.
+RAP vendors `coins.js` verbatim under `assets/docs-theme/modules/coins.js`; the on-page **presence
+check** (the button renders beside "Aa", `+1` on first daily view) is browser-gated and tracked as the
+docs-site visual `gap` in [`adoption-manifest.md`](adoption-manifest.md) (Phase D of the 2026-07-25
+adopt).
+
 ## The prime directive: subtle, never central
 
 - **Never gate.** Coins must not unlock, restrict, or grant exclusive access to anything. The full

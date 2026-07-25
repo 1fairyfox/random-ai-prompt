@@ -257,6 +257,21 @@ it. Surface open questions instead of guessing. Trivial one-step changes are exe
 bureaucratize a typo. See [`notes/reference/planning.md`](notes/reference/planning.md) and the collaboration
 rhythm in [`notes/reference/working-rhythm.md`](notes/reference/working-rhythm.md).
 
+**Phase by default, and treat every checklist as a contract (hub 1.4.0 / 0.21.0).** Decompose
+non-trivial work into **as many phases as it needs** across research → planning → implementation;
+"do as much as you can" is never a licence to stop at a shippable milestone while the ask is
+unfinished. A checklist — a standard's `## Verify` table, a runbook's steps, or **a multi-part owner
+directive** — is a contract: enumerate every item, record each outcome individually (`pass / fixed /
+N-A(reason) / gap(due)`), read optional items ambitiously (descope only out loud), and back a
+deferral with a real attempt + retest trigger, never a plausible reason. **A bare `✅` / "standards
+adopted" over a multi-item set is banned wording** — back every such claim with a row in
+[`notes/reference/adoption-manifest.md`](notes/reference/adoption-manifest.md) (`copied-only ≠
+adopted`). A genuinely multi-part owner directive is transcribed verbatim into
+`notes/plans/<date>-mandate.md`, one row per clause, before execution. End every pass with an
+explicit not-done / needs-owner's-eyes disclosure. See
+[`notes/reference/checklists-are-contracts.md`](notes/reference/checklists-are-contracts.md) and
+[`notes/reference/mandate-ledger.md`](notes/reference/mandate-ledger.md).
+
 After making changes, run this loop without being asked:
 
 1. **Lint + format.** `npm run lint` (fix new errors; pre-existing warnings are fine) and

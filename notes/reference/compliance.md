@@ -56,7 +56,16 @@ standard's `## Verify` section where it has one; a few standards are enforced by
 | testing | [`../plans/testing.md`](../plans/testing.md) — Vitest (Node + jsdom) + Playwright suites green; every fix ships a regression test ([`working-agreements.md`](working-agreements.md) §B1) |
 | supply-chain-hardening | CI config, not a note — Scorecard/CodeQL/SonarCloud/Dependabot workflows + `main` branch protection; quality metrics hold or rise ([`working-agreements.md`](working-agreements.md) §B5/§F) |
 | legal-docs | `CLAUDE.md` "Keep the Legal Docs Accurate" + [`working-agreements.md`](working-agreements.md) §F — the three self-hosted pages under `targets/web/public/legal/` stay code-accurate; "Last updated" bumped on data-practice changes |
-| badges | the README badge block (shields.io + Codecov) reflects the live CI/coverage/security state |
+| badges | the README badge block (shields.io + Codecov) reflects the live CI/coverage/security state — all 20 canonical badges present in order (§badges) |
+| checklists-are-contracts | [`checklists-are-contracts.md` → Verify](checklists-are-contracts.md#verify) — no unbacked `✅`/"adopted" over a list; per-item outcomes recorded; deferrals carry attempt + retest; every pass ends with a disclosed not-done list; the [adoption manifest](adoption-manifest.md) is the backing record |
+| mandate-ledger | [`mandate-ledger.md` → Verify](mandate-ledger.md#verify) — a multi-part owner directive gets a verbatim one-row-per-clause `notes/plans/<date>-mandate.md`; completion claims cite rows; no milestone-anchoring under an open mandate |
+| readme | [`readme.md` → Verify](readme.md#verify) — worded docs link near top, organized "Get it" section, mesh footer at bottom; missing links for existing destinations carry a recorded exception |
+| docker | [`docker.md` → Verify](docker.md#verify) — Linux-only build/test runs locally in a committed Docker path first, CI as backstop (tracked `gap` until the Dockerfile ships — see [adoption-manifest](adoption-manifest.md)) |
+| adoption-manifest | [`adoption-manifest.md` → Verify](adoption-manifest.md#verify-is-it-being-followed) — one row per standard; `copied-only ≠ adopted`; no `implemented` without a recorded per-row pass; no summary claim without a backing row |
+
+> **The [adoption manifest](adoption-manifest.md) is the record this audit reconciles against.** A
+> row here flips to `implemented` in the manifest only on a recorded per-row `## Verify` pass; this
+> audit is the pass that does it.
 
 ## How to run it (on request only)
 

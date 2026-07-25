@@ -343,6 +343,14 @@ and versioning notes. Notes-only adoption — no `VERSION` bump, no release. Ope
 owner, in the `1fairyfox.github.io` repo): the registry's `notes:` link still points at `tree/master/…`
 (update to `tree/main/…` after the default branch flips), and the `adopts_hub`/docs-site flag is overstated.
 The registry's `branch: dev` is **correct** — that field tracks the work branch, not the default branch.
+**Hub span 0.20.2 → 1.6.1 adopted 2026-07-25:** seeded the project's first
+[`reference/adoption-manifest.md`](reference/adoption-manifest.md) (0.21.0 linchpin) + four new-standard
+notes (`checklists-are-contracts`, `mandate-ledger`, `docker`, `readme`), folded ship-contract / phase-
+by-default / manifest-gate / base-coin-mandatory into the existing notes, and made the README
+`readme`-standard compliant. Notes/docs only, no `VERSION` bump. **Open `gap`s (in the manifest):** the
+first full compliance pass (flips `copied-only`→`implemented`), the browser-gated docs-site chrome bump
+2.2.1→2.3.0 + 1.4.0 visual requirements, and a committed Docker path for the Linux-only test loop. See
+[`fairyfox-reports/2026-07-25-adopting-updates.md`](fairyfox-reports/2026-07-25-adopting-updates.md).
 
 **Blocks (2.5.0):** added **pick-one groups** — a category folder with 2+ generators is an implied
 group (`{#scene}` runs one random scene generator; `.group` files + markers too), and the same for

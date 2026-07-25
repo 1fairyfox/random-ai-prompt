@@ -24,6 +24,16 @@ For non-trivial work, before making changes, write a short structured plan:
 
 Keep durable plans in `notes/plans/` so they live with the project's other notes.
 
+## Phase by default (hub 1.4.0)
+
+Non-trivial work is decomposed into **as many phases as it needs**, across three levels: **research**
+(primary sources, local + online — not skipped or rushed), **planning** (as often as needed, primarily
+for the executor), and **implementation** (coherent, shippable phases). "Do as much as you can" does
+**not** re-anchor "done" to a shippable milestone — a green release mid-effort never implies the work
+is finished (see [`mandate-ledger.md`](mandate-ledger.md) "rows remaining: N"). Under-phasing a large
+ask is the failure this closes; a mixed adoption (headless-verifiable + browser-gated) is phased and
+the deferred slice is named as a tracked `gap`, not held or dropped.
+
 ## What's exempt
 
 Trivial, single-step changes (a typo, a one-line fix, an obvious rename) don't need a written plan —

@@ -180,6 +180,13 @@ never rewrites history (and force-pushes to `main` are now blocked by branch pro
 - Don't commit user data / runtime artifacts: `user-settings.json`, `results.json`, `output/`,
   `node_modules/` (all gitignored).
 
+## Pre-release manifest gate (hub 0.21.0)
+
+Before a release to `main`, the [adoption manifest](adoption-manifest.md) must be current: any
+"standards adopted" claim in the release/changelog is backed by a manifest row, and full CI is green
+and **platform-enforced** (every required job in `main`'s branch-protection required-status-checks,
+not just "ran once"). `copied-only` rows may ship; they may **not** be reported as `implemented`.
+
 ## Verify (is it being followed?)
 
 The check that catches a violation — run on request, report `done`/`partial`/`missing`
