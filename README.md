@@ -31,6 +31,16 @@ fleshed-out prompt. You can then run the result through 40+ models, including Mi
 Gemini, FLUX, and Stable Diffusion, right in your browser with your own API key — or just generate
 the prompt text with no key at all. It runs entirely on your device and stores nothing on a server.
 
+📖 **Documentation** — [fairyfox.io/random-ai-prompt](https://fairyfox.io/random-ai-prompt/)
+
+### Get it
+
+| | |
+|---|---|
+| **Try it live** | Online edition — [prompt.fairyfox.io](https://prompt.fairyfox.io) (no install, bring your own key) |
+| **Download** | Desktop app + self-hostable online build — [GitHub Releases](https://github.com/1fairyfox/random-ai-prompt/releases) |
+| **Source** | [Repository](https://github.com/1fairyfox/random-ai-prompt) · [Notes](https://github.com/1fairyfox/random-ai-prompt/tree/main/notes) |
+
 ## What is this
 
 Random AI Prompt is a tool for anyone who wants good AI-generated images or text without the chore
@@ -188,6 +198,13 @@ Full attributions and license texts are in [list-credits.md](list-credits.md).
 - Online edition: [prompt.fairyfox.io](https://prompt.fairyfox.io)
 - Documentation and API reference: [fairyfox.io/random-ai-prompt](https://fairyfox.io/random-ai-prompt/)
 - Project family: [fairyfox.io](https://fairyfox.io)
+
+---
+
+Part of the **[Fairy Fox](https://fairyfox.io/)** project mesh —
+[all projects](https://fairyfox.io/projects/) ·
+[this project](https://fairyfox.io/random-ai-prompt/) ·
+[shared standards &amp; docs](https://fairyfox.io/docs/).
 
 ## License
 
