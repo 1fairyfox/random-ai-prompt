@@ -52,7 +52,7 @@ result. `Evidence` = a link/path to the proof.
 | process-reports | implemented | 1.6.1 / 2d614f0 | 2026-08-02 pass (adopting-updates report + this compliance-audit report written) | [process-reports.md](process-reports.md); [`../fairyfox-reports/`](../fairyfox-reports/README.md) |
 | compliance | implemented | 1.6.1 / 2d614f0 | 2026-08-02 pass (this full audit walked every row) | [compliance.md](compliance.md) |
 | checklists-are-contracts | implemented | 1.6.1 / 2d614f0 | 2026-08-02 pass (this manifest is the enforcing artifact; audit itemized per standard; no bare ✅) | [checklists-are-contracts.md](checklists-are-contracts.md) |
-| mandate-ledger | copied-only | 1.6.1 / 2d614f0 | 2026-08-02 — note present; no `notes/plans/<date>-mandate.md` triggered (the directives so far were single-intent "do X in full", not enumerable multi-clause lists) | [mandate-ledger.md](mandate-ledger.md) |
+| mandate-ledger | gap(triggers on next multi-part owner directive) | 1.6.1 / 2d614f0 | 2026-08-02 — note present + wired, but no `notes/plans/<date>-mandate.md` has been triggered (the directives so far were single-intent "do X in full", not enumerable multi-clause lists), so the Verify can't be exercised yet | [mandate-ledger.md](mandate-ledger.md) |
 | planning | implemented | 1.6.1 / 2d614f0 | 2026-08-02 pass (plan-first + live task lists throughout; phase-by-default folded into CLAUDE.md step 0) | [planning.md](planning.md) |
 | docs-site | gap(next docs-site preview session) | 1.6.1 / 2d614f0 | 2026-08-02 — **partial**: vendored chrome **2.2.1** vs master **2.3.0**; 1.4.0 subnav/on-site-Notes/whole-chrome/coins-presence are browser-gated, not verified | `assets/docs-theme/`; hub `docs-site/` standard |
 | deployment | implemented | 1.6.1 / 2d614f0 | 2026-08-02 pass (`release.yml` cut v2.60.2 with a CI-derived tag, not hand-pushed; `pages.yml`/`netlify-deploy.yml` present) | [deployment.md](deployment.md); `gh release list` |
@@ -81,7 +81,9 @@ result. `Evidence` = a link/path to the proof.
 
 ## Compliance audit result (2026-08-02)
 
-**Not fully compliant** — 24 of 31 applicable standards `implemented`; the rest are honest, dated gaps.
+**Not fully compliant** — **25 of 30** applicable standards `implemented` (34 rows − 4 `N-A` = 30
+applicable; 5 non-implemented: mandate-ledger, docs-site, ship-contract, supply-chain, docker); the rest
+are honest, dated gaps.
 The audit walked every standard's `## Verify` (checklists-are-contracts). Headline findings, in
 priority order:
 
@@ -116,6 +118,9 @@ remote now carries only `main` and `dev`.
   docs-site preview session.
 - **`gap`: docker path.** A committed `Dockerfile`/`compose.yaml` for the Linux-only test loop.
   **Due:** next adopt pass.
+- **`gap`: mandate-ledger exercise.** The note is adopted + wired, but no multi-part owner directive has
+  yet triggered a `notes/plans/<date>-mandate.md`, so its Verify is unexercised. **Due:** the next
+  genuinely multi-clause owner directive.
 
 ## User exceptions (dated)
 

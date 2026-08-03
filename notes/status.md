@@ -352,7 +352,7 @@ first full compliance pass (flips `copied-only`→`implemented`), the browser-ga
 2.2.1→2.3.0 + 1.4.0 visual requirements, and a committed Docker path for the Linux-only test loop. See
 [`fairyfox-reports/2026-07-25-adopting-updates.md`](fairyfox-reports/2026-07-25-adopting-updates.md).
 
-**First full compliance audit run 2026-08-02:** 24/31 applicable standards `implemented`; **headline
+**First full compliance audit run 2026-08-02:** 25/30 applicable standards `implemented`; **headline
 finding — the ship-contract's OpenSSF Scorecard is 6.7, below the 7.0 floor** (live-API verified; 27
 known vulns, bulk RUSTSEC in the Tauri/Rust desktop deps, plus solo-repo-structural checks). Also
 partial: supply-chain (no release provenance), docs-site (browser-gated), docker (no Dockerfile),

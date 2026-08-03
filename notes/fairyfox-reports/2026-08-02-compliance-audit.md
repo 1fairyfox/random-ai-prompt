@@ -16,7 +16,8 @@ hub_commit: 2d614f0
 
 Ran the **first full standards compliance audit** — walked every adopted standard's `## Verify` and
 recorded a dated per-standard result in [`../reference/adoption-manifest.md`](../reference/adoption-manifest.md).
-Result: **not fully compliant** — 24/31 applicable standards `implemented`, the rest honest dated gaps.
+Result: **not fully compliant** — **25/30** applicable standards `implemented` (34 rows − 4 `N-A`; 5
+non-implemented), the rest honest dated gaps.
 Headline: **ship-contract's OpenSSF Scorecard is 6.7, below the 7.0 floor** (verified live). Fixed one
 gap in-pass (pruned 5 stale Dependabot branches → repo-hygiene clean).
 
