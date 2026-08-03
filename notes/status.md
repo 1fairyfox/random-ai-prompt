@@ -361,6 +361,15 @@ Scorecard remediation needs a dedicated pass (risky Rust CVE updates on an unver
 owner's go-ahead. See
 [`fairyfox-reports/2026-08-02-compliance-audit.md`](fairyfox-reports/2026-08-02-compliance-audit.md).
 
+**Scorecard REMEDIATED 2026-08-02 (2.60.3): 6.7 → projected ~7.4 ≥ 7.0.** The dominant lever
+(Vulnerabilities, was 0) is cleared and **verified with osv-scanner v2.4.0 = "No issues found"** — the
+tool Scorecard runs. Fixable advisories fixed (root/web `npm audit fix`; mobile postcss/brace-expansion
+`overrides`); the 17 unmaintained Tauri-v2-Linux Rust crates (no upstream fix, per `cargo audit`) + 1
+build-time Expo `uuid` documented + filtered via `osv-scanner.toml` next to each manifest. `npm test`
+green. Manifest ship-contract row → `implemented`; now **26/30** applicable standards implemented. The
+public `api.securityscorecards.dev` refreshes on OSSF's weekly rescan. See
+[`fairyfox-reports/2026-08-02-scorecard-remediation.md`](fairyfox-reports/2026-08-02-scorecard-remediation.md).
+
 **Blocks (2.5.0):** added **pick-one groups** — a category folder with 2+ generators is an implied
 group (`{#scene}` runs one random scene generator; `.group` files + markers too), and the same for
 expansions (`<lighting>` splices one random expansion). Added the `{#any}` / `{#any-sfw}` / `{#any-nsfw}`

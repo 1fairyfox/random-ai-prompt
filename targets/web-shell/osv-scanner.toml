@@ -1,0 +1,64 @@
+# osv-scanner ignore config for the Tauri v2 desktop shell (next to Cargo.lock).
+#
+# Read by osv-scanner and by the OpenSSF Scorecard "Vulnerabilities" check (which explicitly
+# supports an osv-scanner.toml next to the dependency manifest — see
+# https://github.com/ossf/scorecard/blob/main/docs/checks.md#vulnerabilities).
+#
+# Every entry is an "unmaintained crate" / "unsound" advisory with NO patched version to move
+# to. They are pulled TRANSITIVELY by Tauri v2 → WebKitGTK on Linux (the gtk3-rs binding set was
+# marked unmaintained 2024-08, but WebKitGTK still requires GTK3), plus a few unmaintained macro
+# / unicode helper crates. Confirmed with `cargo audit` (all "Warning: unmaintained/unsound",
+# zero fixable vulnerabilities). Re-evaluate on every Tauri/dep bump: if Tauri's Linux WebView
+# drops GTK3 or an upstream fix appears, delete the matching entry.
+
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0411"  # gdkwayland-sys
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0412"  # gdk
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0413"  # atk
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0414"  # gdkx11-sys
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0415"  # gtk
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0416"  # atk-sys
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0417"  # gdkx11
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0418"  # gdk-sys
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0419"  # gtk3-macros
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0420"  # gtk-sys
+reason = "Transitive via Tauri v2 WebKitGTK (Linux); gtk3-rs unmaintained, no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0429"  # glib (unsound VariantStrIter)
+reason = "Transitive via Tauri v2 WebKitGTK (Linux) glib 0.18; unsound advisory, no compatible patched release for the GTK3 stack."
+[[IgnoredVulns]]
+id = "RUSTSEC-2024-0370"  # proc-macro-error
+reason = "Unmaintained transitive build/macro dependency; no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2025-0075"  # unic-char-range
+reason = "Unmaintained transitive crate (unic-* family); no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2025-0080"  # unic-common
+reason = "Unmaintained transitive crate (unic-* family); no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2025-0081"  # unic-char-property
+reason = "Unmaintained transitive crate (unic-* family); no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2025-0098"  # unic-ucd-version
+reason = "Unmaintained transitive crate (unic-* family); no patched version."
+[[IgnoredVulns]]
+id = "RUSTSEC-2025-0100"  # unic-ucd-ident
+reason = "Unmaintained transitive crate (unic-* family); no patched version."
