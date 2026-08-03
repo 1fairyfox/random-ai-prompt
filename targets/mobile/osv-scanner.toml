@@ -1,0 +1,14 @@
+# osv-scanner ignore config for the Expo/React Native app (next to package-lock.json).
+#
+# Read by osv-scanner and by the OpenSSF Scorecard "Vulnerabilities" check (which supports an
+# osv-scanner.toml next to the dependency manifest — see
+# https://github.com/ossf/scorecard/blob/main/docs/checks.md#vulnerabilities).
+#
+# The fixable advisories here were FIXED, not ignored: postcss and brace-expansion are pinned to
+# patched versions via the "overrides" block in package.json. The single entry below is a
+# build-time-only Expo-toolchain transitive dependency, not present in the shipped app bundle.
+# Re-evaluate on every Expo SDK bump: if Expo ships a fixed uuid, remove this entry.
+
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"  # uuid — buffer bounds when `buf` passed; via @expo/cli, xcode, config-plugins
+reason = "Moderate advisory in Expo BUILD-TIME tooling (CLI/prebuild/xcode), not shipped in the app bundle; only reachable when a `buf` arg is passed, which the toolchain does not do. A forced uuid-major override breaks the Expo toolchain; the fix is gated on an upstream Expo release."

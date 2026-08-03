@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
+  "overrides": {
+    "postcss": "^8.5.25",
+    "brace-expansion": "^2.0.2"
+  },
   "scripts": {
     "catalog": "node ../../scripts/build-metro-catalog.mjs --tier=full",
     "catalog:play": "node ../../scripts/build-metro-catalog.mjs --tier=sfw",
