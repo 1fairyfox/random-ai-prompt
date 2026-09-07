@@ -239,7 +239,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Set up JDK 21 (AGP/Gradle for RN 0.81)
-        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95 # v5.6.0
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           distribution: temurin
           java-version: 21
