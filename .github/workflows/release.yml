@@ -64,7 +64,7 @@ jobs:
             echo "Tag $tag is new -- will release."
           fi
 
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         if: steps.ver.outputs.should_release == 'true'
         with:
           node-version: 24
@@ -140,7 +140,7 @@ jobs:
 
       - name: Upload artifacts (always, for inspection / dry run)
         if: steps.ver.outputs.should_release == 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-artifacts
           path: |
@@ -154,7 +154,7 @@ jobs:
       # Only on a real (non-dry-run) release. See notes/reference/deployment.md.
       - name: Attest build provenance for release artifacts
         if: steps.ver.outputs.should_release == 'true' && github.event.inputs.dry_run != 'true'
-        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
           subject-path: |
             random-ai-prompt-*.tar.gz
@@ -189,7 +189,7 @@ jobs:
 
       - name: Publish GitHub Release
         if: steps.ver.outputs.should_release == 'true' && github.event.inputs.dry_run != 'true'
-        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           tag_name: ${{ steps.ver.outputs.tag }}
           name: ${{ steps.ver.outputs.tag }}
@@ -223,7 +223,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
           cache: npm
@@ -354,7 +354,7 @@ jobs:
           done
 
       - name: Attest build provenance for the installers
-        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
           subject-path: |
             dist-desktop/*.msi
